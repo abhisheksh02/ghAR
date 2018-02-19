@@ -27,22 +27,10 @@
         text-align: center;
       }
 
-      #hide-listings,
-      #show-listings {
-        width: 48%;
-      }
-
-      hr {
-        background: #D0D7D9;
-        height: 1px;
-        margin: 20px 0 20px 0;
-        border: none;
-      }
-
       #map {
         bottom:0px;
         height: 100%;
-        left: 362px;
+        left: 340px;
         position: absolute;
         right: 0px;
       }
@@ -63,73 +51,81 @@
         height: 200px;
       }
 
-      #search-within-time-text {
-        width: 84%;
-      }
 
       .text {
         font-size: 12px;
       }
 
-      #toggle-drawing {
-        width: 27%;
-        position: relative;
-        margin-left: 10px;
-      }
 
-      #zoom-to-area-text {
-        width: 70%;
-      }
 
-      #zoom-to-area {
-        width: 24%;
-      }
     </style>
+    <link rel="stylesheet" href="css/sem-css/semantic.min.css">
 
-    <link href="css/style.css" rel="stylesheet">
-
-    <link href="css/color.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="options-box">
-        <h1>Find Your New ghAR</h1>
+          <h2 class="ui header">
+              <img src="images/ghar-logo.png" class="ui image">
+              <div class="sub header">Find your new ghAR now.</div>
+          </h2>
         <div>
-          <input id="show-listings" type="button" value="Show Listings" class="button">
-          <input id="hide-listings" type="button" value="Hide Listings" class="button">
-          <hr>
+            <div class="fluid ui buttons">
+                <button class="ui blue button" id="show-listings">Show Listings</button>
+                <div class="or"></div>
+                <button class="ui button" id="hide-listings">Hide Listings</button>
+            </div>
+
+           <div class="ui divider"></div>
+
           <span class="text-bold"> Draw a shape to search within it for homes!</span>
-          <center>
-              <input id="toggle-drawing"  type="button" value="Drawing Tools">
-          </center>
+              <button class="fluid ui blue button" id="toggle-drawing">
+                  Drawing Tools
+              </button>
         </div>
-        <hr>
+
+         <div class="ui divider"></div>
+
         <div>
-          <span class="text-bold">Search Homes near your Favorite Place!</span>
-          <input id="zoom-to-area-text" type="text" placeholder="Enter your favorite area!">
-          <input id="zoom-to-area" type="button" value="Find">
-        </div>
-        <hr>
+            <span class="text-bold">Search Homes near your Favorite Place!</span>
+            <div class="fluid ui action input">
+                <input id="zoom-to-area-text" type="text" placeholder="Search Homes...">
+                <button id="zoom-to-area" class="ui button">Search</button>
+            </div>
+
+         <div class="ui divider"></div>
+
         <div>
           <span class="text-bold">Find Homes close to your Working Place!</span><br>
           <span class="text"> Within </span>
-          <select id="max-duration">
-            <option value="10">10 min</option>
-            <option value="15">15 min</option>
-            <option value="30">30 min</option>
-            <option value="60">1 hour</option>
+
+          <select class="ui basic floating dropdown button" id="max-duration">
+                <option value="10">10 min</option>
+                <option value="15">15 min</option>
+                <option value="30">30 min</option>
+                <option value="60">1 hour</option>
           </select>
-          <select id="mode">
+
+          <select class="ui basic floating dropdown button" id="mode">
             <option value="DRIVING">drive</option>
             <option value="WALKING">walk</option>
             <option value="BICYCLING">bike</option>
             <option value="TRANSIT">transit ride</option>
-          </select>
+        </select>
+
           <span class="text">of</span>
-          <input id="search-within-time-text" type="text" placeholder="Ex: Subhash Nagar or Laxmi Nagar, New Delhi, India">
-          <input id="search-within-time" type="button" value="Go">
+
+          <div class="ui hidden divider">
+          </div>
+          <div class="fluid ui action input">
+              <input id="search-within-time-text" type="text" placeholder="Ex: Subhash Nagar or Laxmi Nagar">
+              <button id="search-within-time" class="ui button">GO</button>
+          </div>
         </div>
-        <hr>
+
+         <div class="ui divider"></div>
+
+
         <div class="lists">
 
           <ol id="ol-lists">
