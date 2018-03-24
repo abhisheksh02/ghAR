@@ -1,4 +1,5 @@
 var nodemailer= require('nodemailer');
+var saveProperty= require('../models/property/property');
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -44,8 +45,15 @@ function sendmail(req, callback){
             console.log(error);
             callback({success: false, msg: error});
         } else {
-            console.log('Email sent: ' + info.response);
-            callback({success: true, data: info.response});
+            saveProperty.saveProperty(req, function(result){
+                if(result.success){
+                    console.log('Email sent: ' + info.response);
+                    callback({success: true, data: info.response});
+                }else{
+                    callback({success: false, data: result.err});
+                }
+            })
+            
         }
     });
 }

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 // const mongoose= require('../db/connection/connect');
-// const property= require('../models/property/property');
+const property= require('../models/property/property');
 
 var obj= {
     title: 'ras vihar',
