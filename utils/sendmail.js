@@ -45,14 +45,15 @@ function sendmail(req, callback){
             console.log(error);
             callback({success: false, msg: error});
         } else {
-            saveProperty.saveProperty(req, function(result){
-                if(result.success){
-                    console.log('Email sent: ' + info.response);
-                    callback({success: true, data: info.response});
-                }else{
-                    callback({success: false, data: result.err});
-                }
-            })
+            // saveProperty.saveProperty(req, function(result){
+            //     if(result.success){
+            //         console.log('Email sent: ' + info.response);
+            //         callback({success: true, data: info.response});
+            //     }else{
+            //         callback({success: false, data: result.err});
+            //     }
+            // })
+            callback({success: true, data: info.response});
             
         }
     });
