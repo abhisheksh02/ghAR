@@ -1,5 +1,5 @@
 const mongoose= require('mongoose');
-mongoose.connect('mongodb://localhost/ghAR');
+// mongoose.connect('mongodb://localhost/ghAR');
 // const mongoose= require('../../db/connection/connect');
 
 const propertySchema= mongoose.Schema({
