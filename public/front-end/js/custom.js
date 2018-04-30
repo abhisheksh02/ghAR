@@ -61,6 +61,7 @@ jQuery(function () {
 
 		jQuery('#main-form').submit(function(e){
 			alert('submit');
+			console.log('hello');
 			$.ajax({
 				url: '/property',
                 type: 'post',

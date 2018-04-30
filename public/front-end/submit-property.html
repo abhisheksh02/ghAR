@@ -126,7 +126,7 @@
 				</div>
 			</div>
 
-			<form action="/property" method="post" id="main-form" class="ui form" style="margin-left:100px; margin-right:100px; margin-bottom:40px">
+			<form action="/property" name="main-form" method="post" id="main-form" onsubmit="return validation()" class="ui form" style="margin-left:100px; margin-right:100px; margin-bottom:40px">
 
 				<h4 class="ui dividing header">Personal Information</h4>
 				<div class="field">
@@ -360,6 +360,36 @@
 		<!-- jQuery Custom
 		================================================== -->
 		<script src="js/custom.js" type="text/javascript"></script>
+
+		<script>
+            function validation() {
+                var form= document.forms['main-form'];
+                var fname= form['first-name'].value;
+                var lname= form['last-name'].value;
+                var title= form['property-title'].value;
+                var description= form['property-desc'].value;
+                var address= form['address'].value;
+                var city= form['city'].value;
+                var state= form['state'].value;
+                var zip= form['zip'].value;
+                var price= form['price'].value;
+                var area= form['area'].value;
+                var bedrooms= form['bedrooms'].value;
+                var bathrooms= form['bathrooms'].value;
+                var balcony= form['balcony'].value;
+
+                if(fname== '' || lname== '' || title== '' || description== '' || address== ''|| city=='' || state== ''){
+                    alert('Fill all Details');
+                    return false;
+				}else if(zip== ''|| price==''|| area=='' || bedrooms=='' || bathrooms=='' || balcony==''){
+                    alert('Fill all Details');
+                    return false;
+				}else{
+				    return true;
+				}
+
+            }
+		</script>
 
 	</body>
 </html>
