@@ -91,7 +91,7 @@ jQuery(function () {
 			zoom: 16,
 
 			// The latitude and longitude to center the map (always required)
-			center: new google.maps.LatLng(28.6213, 77.0922), // Janakpuri
+			center: new google.maps.LatLng(28.6318, 77.1165), // Subhash Nagar
 
 			// How you would like to style the map.
 			// This is where you would paste any style found on Snazzy Maps.
@@ -107,7 +107,7 @@ jQuery(function () {
 
 		// Let's also add a marker while we're at it
 		var marker = new google.maps.Marker({
-			position: new google.maps.LatLng(28.6213, 77.0922),
+			position: new google.maps.LatLng(28.6318, 77.1165),
 			map: map,
 			title: 'Snazzy!'
 		});
